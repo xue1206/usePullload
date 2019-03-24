@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import SelectionList from './page/selection-list-test';
+import SelectionList from '../betterScroll/SelectionList';
 
 class App extends Component {
   state = {
