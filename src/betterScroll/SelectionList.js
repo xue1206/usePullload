@@ -98,7 +98,14 @@ console.log(listHeight)
 
     scrollInst.current.scrollTo(0, -listHeight[2])
 
-  }, [])
+  }, []);
+
+  useEffect(() => {
+      console.log('[]effect', currentIndex);
+      return () => {
+        console.log('[]effect return ', currentIndex);
+      }
+  },[currentIndex]);
   
   console.log('diff',diff, currentIndex);
 

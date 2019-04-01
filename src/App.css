@@ -3,8 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+html, body, #root{height: 100%;}
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -39,4 +41,46 @@
 
 ul{
   list-style: none;
+}
+
+.test-transition-enter{
+  opacity: 0;
+}
+.test-transition-enter-active{
+  opacity: 1;
+  transition: .5s;
+}
+.test-transition-exit{
+  opacity: 1;
+}
+.test-transition-exit-active{
+  opacity: 0;
+  transition: .5s;
+}
+/*transition group*/
+.transitionGroupContainer{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.transitionGroupContainer>div{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.transitionGroupItem-enter{
+  left: 100%;
+}
+.transitionGroupItem-enter-active{
+  left:0;
+  transition: .5s;
+}
+.transitionGroupItem-exit{
+  left: 0;
+}
+.transitionGroupItem-exit-active{
+  left: -100%;
+  transition: .5s;
 }
