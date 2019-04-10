@@ -4,6 +4,7 @@ import './App.css';
 import SelectionList from './page/selection-list-test';
 import IntervalTest from './page/useInetrvalTest';
 import NextTransition from './page/next-transition';
+import HorizontalPickerView from './swiper/horizontalPickerView';
 
 class Index extends React.Component{
   state={a:1};
@@ -11,6 +12,7 @@ class Index extends React.Component{
     console.log('unmount',this.state)
   }
   render(){
+    console.log('app this',this);
     return (
       <div onClick={() => this.setState({a:2})}>
         shouye {this.state.a}
@@ -32,6 +34,7 @@ class App extends Component {
           <Route path="/nextTransition" component={NextTransition}></Route>
           <Route path="/citylist" component={SelectionList}></Route>
           <Route path="/intervalTest" component={IntervalTest}></Route>
+          <Route path="/horizontalPickerView" component={HorizontalPickerView}></Route>
           <Route path="/" component={Index}></Route>
           
         </Switch>

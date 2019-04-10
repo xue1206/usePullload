@@ -3,6 +3,7 @@ import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 function NextTransition() {
     const [index, setIndex] = useState(0);
+    const [index2, setIndex2] = useState(2);
     // useEffect(() => {
     //     const id = setInterval(() => {
     //         setIndex(i=>i===0?1:0)
@@ -15,6 +16,8 @@ function NextTransition() {
     const click = () => {
         setIndex(i=>i+1);
     }
+
+    console.log('next transition this', this);
     return (
         <>
             <TransitionGroup className='transitionGroupContainer'>
@@ -24,7 +27,7 @@ function NextTransition() {
                         classNames="transitionGroupItem"
                         timeout={1000}
                     >
-                        <div className='block'>{display[index]}</div> 
+                        <div className='block'>{display[index] + index2}</div> 
                     </CSSTransition> 
                 
             </TransitionGroup>
